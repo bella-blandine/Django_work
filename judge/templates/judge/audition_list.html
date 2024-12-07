@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auditions</title>
+</head>
+<body>
+    <h1>Auditions</h1>
+    <a href="{% url 'create-audition' %}">Create New Audition</a>
+    <ul>
+        {% for audition in auditions %}
+            <li>
+                {{ audition.title }} (Judge: {{ audition.judge.name }})
+                <a href="{% url 'delete-audition' audition.id %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

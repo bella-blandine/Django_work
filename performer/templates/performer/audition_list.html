@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Auditions</title>
+</head>
+<body>
+    <h1>Available Auditions</h1>
+    <ul>
+        {% for audition in auditions %}
+            <li>
+                {{ audition.title }} (Judge: {{ audition.judge.name }})
+                <a href="{% url 'join-audition' audition.id %}">Join</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

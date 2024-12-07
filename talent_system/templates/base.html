@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Talent Management System{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Talent Management System</h1>
+        <nav>
+            <a href="/performer/">Performers</a> |
+            <a href="/judge/auditions/">Auditions</a> |
+            <a href="/judge/performances/">Performances</a>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        {% block content %}
+        <!-- Content from child templates will go here -->
+        {% endblock %}
+    </main>
+    <footer>
+        <hr>
+        <p>&copy; 2024 Talent Management System</p>
+    </footer>
+</body>
+</html>

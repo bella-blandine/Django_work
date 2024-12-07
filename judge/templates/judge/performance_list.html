@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Performances</title>
+</head>
+<body>
+    <h1>Performances</h1>
+    <ul>
+        {% for performance in performances %}
+            <li>{{ performance.performer.name }} in {{ performance.audition.title }} - Score: {{ performance.score }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
